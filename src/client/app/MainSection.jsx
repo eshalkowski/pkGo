@@ -11,7 +11,7 @@ class MainSection extends React.Component {
         starDate: '07/11/16',
         userName: 'SirUrlich',
         description: 'Lets Talk Strategy',
-        posts:[
+        posts: [
           {
             userName: 'Charles',
             text: 'Catch all pokemon and trade in for candy.',
@@ -24,7 +24,7 @@ class MainSection extends React.Component {
         starDate: '07/11/16',
         userName: 'SirUrlich',
         description: 'Lets Talk Strategy',
-        posts:[
+        posts: [
           {
             userName: 'Charles',
             text: 'I Caught a Jigglypuff with your Squirtle',
@@ -37,7 +37,7 @@ class MainSection extends React.Component {
         starDate: '07/11/16',
         userName: 'SirUrlich',
         description: 'Lets Talk Strategy',
-        posts:[
+        posts: [
           {
             userName: 'Charles',
             text: 'Catch all pokemon and trade in for candy.',
@@ -50,7 +50,33 @@ class MainSection extends React.Component {
         starDate: '07/11/16',
         userName: 'SirUrlich',
         description: 'Lets Talk Strategy',
-        posts:[
+        posts: [
+          {
+            userName: 'Charles',
+            text: 'Catch all pokemon and trade in for candy.',
+            timestamp: '7:55pm'
+          }
+        ]
+      },
+      {
+        name: 'Strategy',
+        starDate: '07/11/16',
+        userName: 'SirUrlich',
+        description: 'Lets Talk Strategy',
+        posts: [
+          {
+            userName: 'Charles',
+            text: 'Catch all pokemon and trade in for candy.',
+            timestamp: '7:55pm'
+          }
+        ]
+      },
+      {
+        name: 'Strategy',
+        starDate: '07/11/16',
+        userName: 'SirUrlich',
+        description: 'Lets Talk Strategy',
+        posts: [
           {
             userName: 'Charles',
             text: 'Catch all pokemon and trade in for candy.',
@@ -63,12 +89,11 @@ class MainSection extends React.Component {
 
   render() {
     return (
-      <div>
-        { this.topics.map(function(topic){
-          return <div style={{width:300, height:400, float:'left', margin:5}}><TopicCard topic={topic} /></div>;
-          
-        })
-          
+      <div style={{ display: 'flex', justifyContent: 'center', flexFlow: 'row wrap', margin: '0 auto' }}>
+        {
+          this.topics.map(function (topic) {
+            return <div style={{ width: 500, margin: 5 }}><TopicCard topic={topic} /></div>;
+          })
         }
       </div>
     );

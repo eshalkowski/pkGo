@@ -1,9 +1,7 @@
 import React from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 class TopicCard extends React.Component {
 
   constructor(props) {
@@ -12,7 +10,7 @@ class TopicCard extends React.Component {
 
   render() {
     return (
-        <Card className="topicCard">
+        <Card>
           <CardHeader
             title={this.props.topic.name}
             subtitle={this.props.topic.description}
