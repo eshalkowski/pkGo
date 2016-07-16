@@ -192,6 +192,13 @@ module.exports = function (app, passport, path) {
         }));
   });
 
+  app.get('/topics', function (req, res) {
+    var topicName = req.params.topic;
+    res.send(
+      topics
+    )
+  });
+
 
 };
 // route middleware to ensure user is logged in
