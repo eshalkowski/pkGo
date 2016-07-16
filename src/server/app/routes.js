@@ -1,4 +1,4 @@
-module.exports = function (app, passport, path) {
+module.exports = function (app, passport) {
 
   // normal routes ===============================================================
 
@@ -32,11 +32,7 @@ module.exports = function (app, passport, path) {
   });
 
   // process the login form
-  app.post('/login', passport.authenticate('local-login', {
-    successRedirect: '/profile', // redirect to the secure profile section
-    failureRedirect: '/login', // redirect back to the signup page if there is an error
-    failureFlash: true // allow flash messages
-  }));
+  app.post('/login', passport.authenticate('local-login'));
 
   // SIGNUP =================================
   // show the signup form
