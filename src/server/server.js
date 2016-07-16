@@ -4,6 +4,7 @@ var port     = process.env.PORT || 8080;
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
+var path = require('path');
 
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -35,7 +36,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 //enable cors in dev
 app.use(cors());
 // routes ======================================================================
-require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+require('./app/routes.js')(app, passport, path); // load our routes and pass in our app and fully configured passport
 
 // launch ======================================================================
 app.listen(port);

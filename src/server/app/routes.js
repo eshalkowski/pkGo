@@ -1,11 +1,11 @@
-module.exports = function (app, passport) {
+module.exports = function (app, passport, path) {
 
   // normal routes ===============================================================
 
   // show the home page (will also have our login links)
-  // app.get('/', function(req, res) {
-  //   res.render("");
-  //});
+   app.get('/', function(req, res) {
+     res.sendfile(path.resolve('src/client/index.html'));
+  });
 
   // PROFILE SECTION =========================
   app.get('/profile', isLoggedIn, function (req, res) {
