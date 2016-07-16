@@ -23,7 +23,7 @@ class MainSection extends React.Component {
         name: 'Awesome Catches',
         starDate: '07/11/16',
         userName: 'SirUrlich',
-        description: 'Lets Talk Strategy',
+        description: 'Lets Talk About Them Awesome Finds',
         posts: [
           {
             userName: 'Charles',
