@@ -34,7 +34,7 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 //enable cors in dev
-app.use(cors());
+app.use(cors({orgin:true}));
 // routes ======================================================================
 require('./app/routes.js')(app, passport, path); // load our routes and pass in our app and fully configured passport
 
