@@ -11,7 +11,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
-var cors = require('cors');
+var cors = require('express-cors');
 var configDB = require('./config/database.js');
 
 // configuration ===============================================================
@@ -34,7 +34,14 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 //enable cors in dev
-app.use(cors({orgin:true}));
+
+ 
+app.use(cors({
+    allowedOrigins: [
+        'localhost:3000',
+        '*'
+    ]
+}))
 // routes ======================================================================
 require('./app/routes.js')(app, passport, path); // load our routes and pass in our app and fully configured passport
 
